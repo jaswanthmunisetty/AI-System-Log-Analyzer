@@ -1,8 +1,4 @@
-Your project is actually solid—but your README can either make it look like a serious engineering tool… or like a random college dump. Most people screw this up. Let’s not.
 
-Here’s a **clean, recruiter-level README.md** you can paste directly 👇
-
----
 
 # 🔍 AI Log Analyzer
 
