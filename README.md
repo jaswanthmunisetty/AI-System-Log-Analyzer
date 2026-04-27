@@ -1,6 +1,6 @@
 
 
-# 🔍 AI Log Analyzer
+# 🔍LogOracle — GenAI-Powered Predictive Failure Intelligence for Real-Time System Monitoring
 
 An AI-powered full-stack log analysis tool that **detects issues, predicts failures, and explains system problems in simple language**.
 
