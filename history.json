@@ -1,0 +1,2302 @@
+[
+  {
+    "id": 1776684902153,
+    "timestamp": "2026-04-20T11:35:02.153Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database credentials and server status"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory",
+          "suggestion": "Increase the system memory or close unused applications"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6.5,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close unused applications or upgrade the CPU"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 6,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unused applications or increase the system memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues and needs urgent attention"
+    }
+  },
+  {
+    "id": 1776685289628,
+    "timestamp": "2026-04-20T11:41:29.628Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disrupt service.",
+          "suggestion": "Check database credentials and connection settings, and ensure the database server is running."
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 8.5,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption.",
+          "suggestion": "Increase the system's memory or optimize memory usage to prevent this issue."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is very high, which can cause slow performance and overheating.",
+          "suggestion": "Check for resource-intensive processes and optimize or terminate them if necessary."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is high, which can cause performance issues and crashes.",
+          "suggestion": "Check for memory leaks and optimize memory usage to prevent this issue."
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connections and memory, which can cause significant disruptions and data loss."
+    }
+  },
+  {
+    "id": 1776685295100,
+    "timestamp": "2026-04-20T11:41:35.100Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database credentials and connection settings"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase the system memory or free up unused memory"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Optimize the system to use less CPU or add more CPU power"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The system memory is being used too much",
+          "suggestion": "Free up unused memory or increase the system memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues and high usage"
+    }
+  },
+  {
+    "id": 1776685299899,
+    "timestamp": "2026-04-20T11:41:39.899Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and downtime.",
+          "suggestion": "Check the database connection settings and restart the database service."
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption.",
+          "suggestion": "Increase the system memory or optimize the application to use less memory."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can cause slow performance and overheating.",
+          "suggestion": "Check for resource-intensive processes and optimize the system for better performance."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is very high, which can cause slow performance and crashes.",
+          "suggestion": "Check for memory leaks and optimize the application to use less memory."
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The system is experiencing critical issues with database connection failures and out of memory errors, which can cause significant downtime and data loss."
+    }
+  },
+  {
+    "id": 1776685305330,
+    "timestamp": "2026-04-20T11:41:45.330Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database credentials and server status"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory",
+          "suggestion": "Increase the system memory or close unnecessary programs"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close unnecessary programs or upgrade the CPU"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unnecessary programs or add more memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system has critical issues with database connection and memory, and high CPU usage"
+    }
+  },
+  {
+    "id": 1776685312889,
+    "timestamp": "2026-04-20T11:41:52.889Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database connection settings and restart the service"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 8.5,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase the memory or close unused applications"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close unused applications or upgrade the CPU"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unused applications or add more memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system has critical issues with database connection and memory, and high CPU and memory usage"
+    }
+  },
+  {
+    "id": 1776685460228,
+    "timestamp": "2026-04-20T11:44:20.228Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times",
+          "suggestion": "Check database credentials and server status"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system ran out of memory",
+          "suggestion": "Increase system memory or optimize memory usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is very high",
+          "suggestion": "Optimize system processes or add more CPU power"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 7,
+          "explanation": "Memory usage is very high",
+          "suggestion": "Optimize system memory usage or add more memory"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "System is at high risk due to database connection failures and out of memory issues"
+    }
+  },
+  {
+    "id": 1776685465434,
+    "timestamp": "2026-04-20T11:44:25.434Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection has failed multiple times, which can cause data loss and system crashes",
+          "suggestion": "Check the database credentials and server status to resolve the issue"
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory, which can cause it to crash or become unresponsive",
+          "suggestion": "Increase the system memory or optimize memory usage to prevent this error"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can cause the system to slow down or overheat",
+          "suggestion": "Check for resource-intensive processes and optimize system performance to reduce CPU usage"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is very high, which can cause the system to slow down or run out of memory",
+          "suggestion": "Check for memory leaks or optimize system performance to reduce memory usage"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The system is experiencing critical issues with database connections and memory, as well as high CPU and memory usage, which can cause crashes and data loss"
+    }
+  },
+  {
+    "id": 1776685476355,
+    "timestamp": "2026-04-20T11:44:36.355Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and service downtime",
+          "suggestion": "Check database credentials, server status, and network connectivity to resolve the issue"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 8,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption",
+          "suggestion": "Increase the system memory or optimize the application to use less memory"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can cause slow performance and overheating",
+          "suggestion": "Check for resource-intensive processes and optimize or terminate them if necessary"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is high, which can cause slow performance and errors",
+          "suggestion": "Check for memory leaks or optimize the application to use less memory"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The system is at high risk due to database connection failures, out of memory errors, and high CPU and memory usage"
+    }
+  },
+  {
+    "id": 1776685513682,
+    "timestamp": "2026-04-20T11:45:13.682Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database settings and restart the connection"
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory",
+          "suggestion": "Increase the memory or close unnecessary programs"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close unnecessary programs or upgrade the CPU"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unnecessary programs or increase the memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues and warnings that need to be fixed"
+    }
+  },
+  {
+    "id": 1776685518274,
+    "timestamp": "2026-04-20T11:45:18.274Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9,
+          "explanation": "The database connection has failed multiple times, which can cause data loss and downtime.",
+          "suggestion": "Check the database server status and restart it if necessary."
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 8.5,
+          "explanation": "The system has run out of memory, which can cause crashes and data corruption.",
+          "suggestion": "Increase the system memory or optimize memory usage."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can cause slow performance and overheating.",
+          "suggestion": "Check for resource-intensive processes and optimize or terminate them."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is very high, which can cause slow performance and crashes.",
+          "suggestion": "Check for memory-intensive processes and optimize or terminate them."
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connections and memory, and high CPU and memory usage, which can cause downtime and data loss."
+    }
+  },
+  {
+    "id": 1776685523189,
+    "timestamp": "2026-04-20T11:45:23.189Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and downtime.",
+          "suggestion": "Check the database connection settings and server status to resolve the issue."
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption.",
+          "suggestion": "Increase the system memory or optimize memory usage to prevent this issue."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can cause slow performance and overheating.",
+          "suggestion": "Check for resource-intensive processes and optimize or terminate them if necessary."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is very high, which can cause slow performance and crashes.",
+          "suggestion": "Check for memory-intensive processes and optimize or terminate them if necessary."
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connections and memory, as well as high CPU and memory usage, which can cause significant downtime and data loss."
+    }
+  },
+  {
+    "id": 1776686072947,
+    "timestamp": "2026-04-20T11:54:32.947Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database settings and restart the server"
+        },
+        {
+          "issue": "Out of memory",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory",
+          "suggestion": "Increase the memory or close other applications"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close other applications or upgrade the CPU"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 7,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close other applications or increase the memory"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "The system is having serious issues with the database and memory"
+    }
+  },
+  {
+    "id": 1776686081957,
+    "timestamp": "2026-04-20T11:54:41.958Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times",
+          "suggestion": "Check the database server and credentials"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 9,
+          "explanation": "The system ran out of memory",
+          "suggestion": "Increase the memory or optimize the code"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high",
+          "suggestion": "Optimize the code or add more CPU resources"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 7,
+          "explanation": "The memory usage is very high",
+          "suggestion": "Optimize the code or add more memory resources"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "The system has critical issues with database connection and memory, and high CPU usage"
+    }
+  },
+  {
+    "id": 1776742388964,
+    "timestamp": "2026-04-21T03:33:08.964Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check database credentials and server status"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 9,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase memory or close unnecessary programs"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close unnecessary programs or add more CPU power"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 7,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unnecessary programs or add more memory"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "The system is at high risk due to database connection failure and out of memory error"
+    }
+  },
+  {
+    "id": 1776742680785,
+    "timestamp": "2026-04-21T03:38:00.785Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check database credentials and server status"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase memory or close unused applications"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close resource-intensive programs or upgrade hardware"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unused applications or increase memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues and high resource usage"
+    }
+  },
+  {
+    "id": 1776742689456,
+    "timestamp": "2026-04-21T03:38:09.456Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check database credentials and server status"
+        },
+        {
+          "issue": "Out of memory",
+          "risk_score": 9,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase memory or close unnecessary programs"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Close resource-intensive programs"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Close unnecessary programs"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connection and memory"
+    }
+  },
+  {
+    "id": 1776742825057,
+    "timestamp": "2026-04-21T03:40:25.057Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "The database is not connecting, which means data cannot be saved or retrieved",
+          "suggestion": "Check database settings and server status to fix the connection issue"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory, which can cause it to crash or become unresponsive",
+          "suggestion": "Increase the system's memory or close other memory-intensive programs"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much, which can slow down the system",
+          "suggestion": "Check for resource-intensive programs and close them if necessary"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "The system's memory is being used too much, which can cause issues",
+          "suggestion": "Close unnecessary programs or increase the system's memory"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system has critical issues with database connection and memory, and warnings for high CPU and memory usage"
+    }
+  },
+  {
+    "id": 1776743235301,
+    "timestamp": "2026-04-21T03:47:15.301Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection has failed multiple times, which can cause data loss and system downtime.",
+          "suggestion": "Check the database credentials and network connectivity to resolve the issue."
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory, which can cause it to crash or become unresponsive.",
+          "suggestion": "Increase the system's memory or optimize the application to use less memory."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6.5,
+          "explanation": "The CPU usage is very high, which can cause the system to slow down or overheat.",
+          "suggestion": "Optimize the application to use less CPU or add more CPU resources."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 6,
+          "explanation": "The memory usage is very high, which can cause the system to slow down or run out of memory.",
+          "suggestion": "Optimize the application to use less memory or add more memory resources."
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connections and memory, and high CPU and memory usage, which can cause downtime and data loss."
+    }
+  },
+  {
+    "id": 1776743241721,
+    "timestamp": "2026-04-21T03:47:21.721Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection has failed, which means the system cannot access or store data",
+          "suggestion": "Check the database credentials and server status to resolve the issue"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 9,
+          "explanation": "The system has run out of memory, which can cause it to crash or become unresponsive",
+          "suggestion": "Increase the system's memory or optimize its memory usage to prevent this issue"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is very high, which can slow down the system",
+          "suggestion": "Check for resource-intensive processes and optimize them to reduce CPU usage"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "The memory usage is high, which can cause the system to slow down or run out of memory",
+          "suggestion": "Check for memory-intensive processes and optimize them to reduce memory usage"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The system is experiencing critical issues with database connection and memory, and high CPU and memory usage, which can cause it to become unresponsive or crash"
+    }
+  },
+  {
+    "id": 1776743246312,
+    "timestamp": "2026-04-21T03:47:26.312Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disrupt service",
+          "suggestion": "Check the database credentials and server status to resolve the connection issue"
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 8,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption",
+          "suggestion": "Increase the system memory or optimize memory usage to prevent future errors"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is very high, which can slow down the system and cause overheating",
+          "suggestion": "Check for resource-intensive processes and optimize system performance to reduce CPU usage"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is high, which can cause slow performance and errors",
+          "suggestion": "Check for memory leaks and optimize system configuration to reduce memory usage"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The system is experiencing critical issues with database connections and memory, and high CPU usage, which can cause disruptions and data loss"
+    }
+  },
+  {
+    "id": 1776743255764,
+    "timestamp": "2026-04-21T03:47:35.764Z",
+    "totalLogs": 7,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%\n",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disrupt service.",
+          "suggestion": "Check database credentials, server status, and network connectivity to resolve the issue."
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 8,
+          "explanation": "The system ran out of memory, which can cause crashes and data corruption.",
+          "suggestion": "Increase memory allocation, optimize resource usage, or add more RAM to prevent this issue."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is very high, which can slow down the system and cause overheating.",
+          "suggestion": "Optimize system resources, close unnecessary processes, or upgrade the CPU to improve performance."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is high, which can cause slower performance and increase the risk of errors.",
+          "suggestion": "Optimize system resources, close unnecessary processes, or add more RAM to improve performance."
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The system is experiencing critical issues with database connections and memory, as well as high CPU and memory usage, which can cause significant disruptions and data loss."
+    }
+  },
+  {
+    "id": 1776743448503,
+    "timestamp": "2026-04-21T03:50:48.503Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disrupt services",
+          "suggestion": "Check the database connection settings and restart the database server"
+        },
+        {
+          "issue": "Server Crash",
+          "risk_score": 9,
+          "explanation": "The server crashed unexpectedly, which can cause data loss and disrupt services",
+          "suggestion": "Check the server logs to identify the cause of the crash and take preventive measures"
+        },
+        {
+          "issue": "Out of Memory Error",
+          "risk_score": 8.5,
+          "explanation": "The server ran out of memory, which can cause slow performance and crashes",
+          "suggestion": "Increase the heap size or optimize the server's memory usage"
+        },
+        {
+          "issue": "Authentication Failure",
+          "risk_score": 6.5,
+          "explanation": "Authentication failed for a user, which can indicate a security issue",
+          "suggestion": "Check the user's credentials and reset the password if necessary"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 5.5,
+          "explanation": "The CPU usage is high, which can cause slow performance",
+          "suggestion": "Optimize the server's resources or add more CPU power"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5,
+          "explanation": "The memory usage is high, which can cause slow performance",
+          "suggestion": "Optimize the server's memory usage or add more memory"
+        },
+        {
+          "warning": "Low Disk Space",
+          "risk_score": 4.5,
+          "explanation": "The disk space is low, which can cause data loss and disrupt services",
+          "suggestion": "Free up disk space or add more storage"
+        },
+        {
+          "warning": "SSL Certificate Expiration",
+          "risk_score": 4,
+          "explanation": "The SSL certificate is expiring soon, which can cause security issues",
+          "suggestion": "Renew the SSL certificate"
+        }
+      ],
+      "overall_risk_score": 8,
+      "summary": "The server is experiencing critical issues with database connections, server crashes, and memory errors, which can cause significant disruptions and data loss"
+    }
+  },
+  {
+    "id": 1776743453486,
+    "timestamp": "2026-04-21T03:50:53.486Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database credentials and server status"
+        },
+        {
+          "issue": "Server Crash",
+          "risk_score": 9,
+          "explanation": "The server stopped working suddenly",
+          "suggestion": "Check the server logs and restart the server"
+        },
+        {
+          "issue": "Memory Exceeded",
+          "risk_score": 8.5,
+          "explanation": "The server ran out of memory",
+          "suggestion": "Increase the heap size or free up some memory"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Optimize the code or add more CPU resources"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 6.5,
+          "explanation": "The memory is being used too much",
+          "suggestion": "Optimize the code or add more memory resources"
+        },
+        {
+          "warning": "Low Disk Space",
+          "risk_score": 5.5,
+          "explanation": "The disk is almost full",
+          "suggestion": "Free up some disk space or add more storage"
+        },
+        {
+          "warning": "SSL Certificate Expiration",
+          "risk_score": 5,
+          "explanation": "The SSL certificate will expire soon",
+          "suggestion": "Renew the SSL certificate as soon as possible"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The server is experiencing critical issues and needs immediate attention"
+    }
+  },
+  {
+    "id": 1776743560231,
+    "timestamp": "2026-04-21T03:52:40.231Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disruption to services",
+          "suggestion": "Check database server status and restart if necessary, also ensure proper configuration"
+        },
+        {
+          "issue": "Server Crash",
+          "risk_score": 9,
+          "explanation": "The server crashed unexpectedly, which can lead to data corruption and security vulnerabilities",
+          "suggestion": "Check server logs to identify the cause and apply necessary fixes, also ensure regular backups"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 8.5,
+          "explanation": "The server ran out of memory, which can cause slow performance and crashes",
+          "suggestion": "Increase the heap size or optimize memory usage to prevent future occurrences"
+        },
+        {
+          "issue": "Authentication Failure",
+          "risk_score": 7,
+          "explanation": "Authentication failed for a user, which can indicate a security issue",
+          "suggestion": "Check user credentials and ensure proper authentication configuration"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is high, which can cause slow performance",
+          "suggestion": "Optimize server configuration and close unnecessary processes"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 6,
+          "explanation": "Memory usage is high, which can cause slow performance and crashes",
+          "suggestion": "Optimize server configuration and close unnecessary processes"
+        },
+        {
+          "warning": "Low Disk Space",
+          "risk_score": 5.5,
+          "explanation": "Disk space is low, which can cause data loss and disruption to services",
+          "suggestion": "Free up disk space by deleting unnecessary files or increasing storage capacity"
+        },
+        {
+          "warning": "SSL Certificate Expiration",
+          "risk_score": 5,
+          "explanation": "SSL certificate is about to expire, which can cause security issues",
+          "suggestion": "Renew the SSL certificate to prevent security vulnerabilities"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The system is experiencing critical issues with database connections, server crashes, and high resource usage, which can cause significant disruption to services"
+    }
+  },
+  {
+    "id": 1776743572436,
+    "timestamp": "2026-04-21T03:52:52.436Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, which can cause data loss and downtime.",
+          "suggestion": "Check database server status and connection settings to resolve the issue."
+        },
+        {
+          "issue": "Server Crash",
+          "risk_score": 9,
+          "explanation": "The server crashed unexpectedly, which can cause data loss and system instability.",
+          "suggestion": "Check server logs and system resources to identify the cause and prevent future crashes."
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 8.5,
+          "explanation": "The system ran out of memory, which can cause slow performance and crashes.",
+          "suggestion": "Increase the heap size or optimize memory usage to prevent out of memory errors."
+        },
+        {
+          "issue": "Authentication Failure",
+          "risk_score": 7,
+          "explanation": "Authentication failed for the admin user, which can be a security risk.",
+          "suggestion": "Check admin user credentials and authentication settings to resolve the issue."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 95%, which can cause slow performance and overheating.",
+          "suggestion": "Optimize system resources and processes to reduce CPU usage."
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is at 87%, which can cause slow performance and crashes.",
+          "suggestion": "Optimize system resources and processes to reduce memory usage."
+        },
+        {
+          "warning": "Low Disk Space",
+          "risk_score": 4.5,
+          "explanation": "Only 3GB of disk space is remaining, which can cause data loss and system instability.",
+          "suggestion": "Free up disk space by deleting unnecessary files or expanding storage capacity."
+        },
+        {
+          "warning": "SSL Certificate Expiration",
+          "risk_score": 4,
+          "explanation": "The SSL certificate will expire in 2 days, which can cause security risks and downtime.",
+          "suggestion": "Renew the SSL certificate before it expires to maintain system security."
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The system is experiencing critical issues with database connections, server crashes, and out of memory errors, which can cause significant downtime and data loss."
+    }
+  },
+  {
+    "id": 1776743919140,
+    "timestamp": "2026-04-21T03:58:39.140Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database settings and restart the server"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 9.5,
+          "explanation": "The server stopped working unexpectedly",
+          "suggestion": "Check the server logs and restart the server"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 8.5,
+          "explanation": "The server ran out of memory",
+          "suggestion": "Increase the heap size or free up memory"
+        },
+        {
+          "issue": "Authentication failure",
+          "risk_score": 7,
+          "explanation": "The admin user is having trouble logging in",
+          "suggestion": "Check the admin user's password and try again"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The server is using a lot of CPU power",
+          "suggestion": "Check for resource-intensive tasks and optimize them"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "The server is using a lot of memory",
+          "suggestion": "Free up memory by closing unnecessary tasks"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 5,
+          "explanation": "The server is running out of disk space",
+          "suggestion": "Free up disk space by deleting unnecessary files"
+        },
+        {
+          "warning": "SSL certificate expiration",
+          "risk_score": 4.5,
+          "explanation": "The SSL certificate is about to expire",
+          "suggestion": "Renew the SSL certificate to avoid security issues"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "The server is experiencing critical issues and needs immediate attention"
+    }
+  },
+  {
+    "id": 1776926588510,
+    "timestamp": "2026-04-23T06:43:08.510Z",
+    "totalLogs": 11,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 11,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining\nWARNING: SSL certificate expires in 2 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9,
+          "explanation": "The database connection failed multiple times, which can cause data loss and disrupt services",
+          "suggestion": "Check the database credentials and server status to resolve the issue"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 9.5,
+          "explanation": "The server crashed unexpectedly, which can cause data loss and disrupt services",
+          "suggestion": "Check the server logs and restart the server to resolve the issue"
+        },
+        {
+          "issue": "Out of memory error",
+          "risk_score": 8,
+          "explanation": "The server ran out of memory, which can cause errors and disrupt services",
+          "suggestion": "Increase the heap size or optimize memory usage to resolve the issue"
+        },
+        {
+          "issue": "Authentication failure",
+          "risk_score": 7,
+          "explanation": "The authentication failed for the admin user, which can cause security issues",
+          "suggestion": "Check the admin credentials and reset the password if necessary"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "The CPU usage is high, which can cause slow performance and errors",
+          "suggestion": "Optimize server resources and close unnecessary processes to resolve the issue"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 6,
+          "explanation": "The memory usage is high, which can cause errors and disrupt services",
+          "suggestion": "Optimize memory usage and close unnecessary processes to resolve the issue"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 5,
+          "explanation": "The disk space is low, which can cause errors and disrupt services",
+          "suggestion": "Free up disk space by deleting unnecessary files or upgrading storage"
+        },
+        {
+          "warning": "SSL certificate expiration",
+          "risk_score": 5,
+          "explanation": "The SSL certificate is about to expire, which can cause security issues",
+          "suggestion": "Renew the SSL certificate to avoid security issues"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The system has critical issues with database connection, server crash, and out of memory errors, which can cause significant disruptions and security issues"
+    }
+  },
+  {
+    "id": 1776926624780,
+    "timestamp": "2026-04-23T06:43:44.780Z",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.1,
+    "ruleAlerts": 3,
+    "logs": "WARNING: CPU usage at 85%\nWARNING: memory usage at 78%\nWARNING: Response time high - 2000ms\nWARNING: Disk space low - only 10GB remaining\nERROR: Authentication failed for user john\nWARNING: SSL certificate expires in 5 days",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Authentication failed",
+          "risk_score": 9.5,
+          "explanation": "Someone tried to log in with wrong password",
+          "suggestion": "Check user credentials and security settings"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 8,
+          "explanation": "Computer is working very hard",
+          "suggestion": "Close unnecessary programs or upgrade hardware"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 7.5,
+          "explanation": "Computer is running low on memory",
+          "suggestion": "Close unnecessary programs or add more RAM"
+        },
+        {
+          "warning": "Slow response time",
+          "risk_score": 6.5,
+          "explanation": "Computer is taking too long to respond",
+          "suggestion": "Check internet connection or upgrade hardware"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 6,
+          "explanation": "Not enough space on computer",
+          "suggestion": "Delete unnecessary files or add more storage"
+        },
+        {
+          "warning": "SSL certificate expiration",
+          "risk_score": 8.5,
+          "explanation": "Security certificate is about to expire",
+          "suggestion": "Renew SSL certificate as soon as possible"
+        }
+      ],
+      "overall_risk_score": 8.1,
+      "summary": "Multiple warnings and an error found, fix them to keep system secure"
+    }
+  },
+  {
+    "id": 1776926645534,
+    "timestamp": "2026-04-23T06:44:05.534Z",
+    "totalLogs": 3,
+    "severity": "MEDIUM",
+    "overall_risk_score": 5.5,
+    "ruleAlerts": 0,
+    "logs": "WARNING: CPU usage at 60%\nWARNING: memory usage at 55%\nWARNING: Response time slightly high - 800ms",
+    "analysis": {
+      "severity": "MEDIUM",
+      "issues": [],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU is working hard",
+          "suggestion": "Check for resource-heavy tasks"
+        },
+        {
+          "warning": "Memory usage",
+          "risk_score": 5.5,
+          "explanation": "Memory is almost full",
+          "suggestion": "Free up some memory space"
+        },
+        {
+          "warning": "Slow response time",
+          "risk_score": 5,
+          "explanation": "Server is taking time to respond",
+          "suggestion": "Optimize server for faster response"
+        }
+      ],
+      "overall_risk_score": 5.5,
+      "summary": "System is working but needs some adjustments"
+    }
+  },
+  {
+    "id": 1776926676065,
+    "timestamp": "2026-04-23T06:44:36.065Z",
+    "totalLogs": 8,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 8,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nERROR: Out of memory\nERROR: Out of memory\nWARNING: CPU usage at 99%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection is not working",
+          "suggestion": "Check the database credentials and connection settings"
+        },
+        {
+          "issue": "Out of Memory",
+          "risk_score": 8,
+          "explanation": "The system is running out of memory",
+          "suggestion": "Increase the system memory or optimize memory usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "The CPU is being used too much",
+          "suggestion": "Optimize system tasks or add more CPU resources"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The system has critical issues that need to be fixed"
+    }
+  },
+  {
+    "id": 1776940499361,
+    "timestamp": "2026-04-23T10:34:59.361Z",
+    "domain": "microservices",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 9,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9,
+          "explanation": "The database connection failed three times, indicating a severe issue",
+          "suggestion": "Restart the db-service pod and check database configuration"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 8.5,
+          "explanation": "The server crashed unexpectedly, which may be related to the database issue",
+          "suggestion": "Check server logs and restart the api-gateway service"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 95%, which may cause performance issues",
+          "suggestion": "Scale up api-gateway replicas to reduce CPU load"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is at 87%, which may cause out-of-memory errors",
+          "suggestion": "Increase heap size for the auth-service"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 4,
+          "explanation": "Only 3GB of disk space remaining, which may cause issues with data storage",
+          "suggestion": "Increase disk space for the db-service"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "Database connection failure → triggered server crash → caused auth-service overload",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 1 minute",
+          "Server crashed unexpectedly with out-of-memory error",
+          "CPU usage at 95% and memory usage at 87% for the api-gateway service"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1776940535240,
+    "timestamp": "2026-04-23T10:35:35.240Z",
+    "domain": "webserver",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.8,
+    "ruleAlerts": 9,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9,
+          "explanation": "Database connection failed multiple times",
+          "suggestion": "Check database server configuration and restart the service"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 9.5,
+          "explanation": "Server crashed unexpectedly",
+          "suggestion": "Enable core dumping and analyze the crash report"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 95%",
+          "suggestion": "Enable rate limiting on the load balancer"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 5.5,
+          "explanation": "Only 3GB of disk space remaining",
+          "suggestion": "Increase disk space or clean up unused files"
+        }
+      ],
+      "overall_risk_score": 8.8,
+      "summary": "Server configuration issue due to repeated database connection failures and server crash",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times",
+          "Server crashed unexpectedly with out of memory error",
+          "CPU usage at 95% and memory usage at 87%"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777010800789,
+    "timestamp": "2026-04-24T06:06:40.789Z",
+    "domain": "microservices",
+    "totalLogs": 6,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nERROR: Out of memory\nWARNING: CPU usage at 95%\nWARNING: memory usage at 85%",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "Database connection failed multiple times",
+          "suggestion": "Restart the db-service pod and check database credentials"
+        },
+        {
+          "issue": "Memory Exhaustion",
+          "risk_score": 8,
+          "explanation": "Out of memory error occurred",
+          "suggestion": "Scale up db-service replicas to increase memory capacity"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is critically high at 95%",
+          "suggestion": "Check api-gateway circuit breaker and scale up replicas if necessary"
+        },
+        {
+          "warning": "High Memory Usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is high at 85%",
+          "suggestion": "Monitor memory usage and scale up replicas if necessary"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "db-service failed due to repeated database connection failures → triggered out of memory error → caused high CPU and memory usage",
+      "failure_prediction": {
+        "probability": 93,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in a row",
+          "Out of memory error occurred",
+          "CPU usage at 95% and memory usage at 85% simultaneously"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777010846326,
+    "timestamp": "2026-04-24T06:07:26.326Z",
+    "domain": "microservices",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 9,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "Database connection failed multiple times",
+          "suggestion": "Check database server status and restart if necessary"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 9,
+          "explanation": "Server crashed unexpectedly, possibly due to database connection failure",
+          "suggestion": "Restart the server and check for any configuration issues"
+        },
+        {
+          "issue": "Memory exceedance",
+          "risk_score": 8,
+          "explanation": "Out of memory error due to heap size exceedance",
+          "suggestion": "Increase heap size or optimize memory usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 95%, which can cause performance issues",
+          "suggestion": "Scale up server resources or optimize CPU usage"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is at 87%, which can cause performance issues",
+          "suggestion": "Optimize memory usage or increase server resources"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 4,
+          "explanation": "Only 3GB of disk space remaining, which can cause storage issues",
+          "suggestion": "Increase disk space or clean up unnecessary files"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "Database connection failed → triggered server crash → caused memory exceedance and high CPU usage",
+      "failure_prediction": {
+        "probability": 85,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 1 minute",
+          "Server crashed unexpectedly with out of memory error",
+          "CPU usage at 95% and memory usage at 87% for 2 minutes"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777010871291,
+    "timestamp": "2026-04-24T06:07:51.291Z",
+    "domain": "webserver",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 9,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "Database connection failed multiple times",
+          "suggestion": "Check database server status and increase connection pool size"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 9,
+          "explanation": "Server crashed unexpectedly",
+          "suggestion": "Check server logs for crash reason and restart server"
+        },
+        {
+          "issue": "Out of memory",
+          "risk_score": 8.5,
+          "explanation": "Heap size exceeded",
+          "suggestion": "Increase heap size or optimize memory usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 95%",
+          "suggestion": "Optimize server configuration or add more CPU resources"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 5,
+          "explanation": "Only 3GB of disk space remaining",
+          "suggestion": "Free up disk space or add more storage"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5.5,
+          "explanation": "Memory usage is at 87%",
+          "suggestion": "Optimize memory usage or add more memory resources"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "This is a server-related issue due to multiple critical errors and warnings",
+      "failure_prediction": {
+        "probability": 90,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times",
+          "Server crashed unexpectedly",
+          "CPU usage is at 95%"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777012912228,
+    "timestamp": "2026-04-24T06:41:52.228Z",
+    "domain": "webserver",
+    "totalLogs": 15,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 10,
+    "logs": "2026-04-24 09:00:01 INFO  auth-service: User login successful for user_id=1042\n2026-04-24 09:00:03 ERROR auth-service: Database connection failed - retrying (attempt 1/3)\n2026-04-24 09:00:05 ERROR auth-service: Database connection failed - retrying (attempt 2/3)\n2026-04-24 09:00:07 CRITICAL auth-service: Database connection failed - giving up!\n2026-04-24 09:00:08 ERROR api-gateway: auth-service is unreachable - circuit breaker opened\n2026-04-24 09:00:09 ERROR payment-service: Cannot verify user token - auth-service down\n2026-04-24 09:00:10 CRITICAL payment-service: Aborting 143 pending transactions\n2026-04-24 09:00:11 ERROR order-service: Payment verification timeout after 5000ms\n2026-04-24 09:00:12 CRITICAL order-service: Server crashed - too many failed requests\n2026-04-24 09:00:13 WARNING api-gateway: CPU usage at 91% - request queue building up\n2026-04-24 09:00:14 ERROR notification-service: Cannot reach order-service - skipping alerts\n2026-04-24 09:00:15 CRITICAL system: Memory at 95% - out of memory condition approaching\n2026-04-24 09:00:16 ERROR db-service: Connection pool exhausted - max 100 connections reached\n2026-04-24 09:00:17 CRITICAL db-service: Database connection failed\n2026-04-24 09:00:18 WARNING api-gateway: Response timeout on /api/checkout after 8000ms",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9,
+          "explanation": "Database connection failed multiple times",
+          "suggestion": "Increase the number of database connections and optimize database queries"
+        },
+        {
+          "issue": "Server Crash Due to Failed Requests",
+          "risk_score": 9.5,
+          "explanation": "Order-service crashed due to too many failed requests",
+          "suggestion": "Implement rate limiting and increase worker processes in nginx.conf"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU Usage",
+          "risk_score": 6,
+          "explanation": "CPU usage is at 91%",
+          "suggestion": "Enable rate limiting on the load balancer and optimize server resources"
+        },
+        {
+          "warning": "Response Timeout",
+          "risk_score": 5,
+          "explanation": "Response timeout on /api/checkout after 8000ms",
+          "suggestion": "Optimize server resources and database queries"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "It's a server configuration issue with multiple critical errors and warnings",
+      "failure_prediction": {
+        "probability": 87,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 6 seconds",
+          "Order-service crashed with 143 pending transactions",
+          "Memory usage at 95% with out of memory condition approaching"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777012922516,
+    "timestamp": "2026-04-24T06:42:02.516Z",
+    "domain": "microservices",
+    "totalLogs": 15,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 10,
+    "logs": "2026-04-24 09:00:01 INFO  auth-service: User login successful for user_id=1042\n2026-04-24 09:00:03 ERROR auth-service: Database connection failed - retrying (attempt 1/3)\n2026-04-24 09:00:05 ERROR auth-service: Database connection failed - retrying (attempt 2/3)\n2026-04-24 09:00:07 CRITICAL auth-service: Database connection failed - giving up!\n2026-04-24 09:00:08 ERROR api-gateway: auth-service is unreachable - circuit breaker opened\n2026-04-24 09:00:09 ERROR payment-service: Cannot verify user token - auth-service down\n2026-04-24 09:00:10 CRITICAL payment-service: Aborting 143 pending transactions\n2026-04-24 09:00:11 ERROR order-service: Payment verification timeout after 5000ms\n2026-04-24 09:00:12 CRITICAL order-service: Server crashed - too many failed requests\n2026-04-24 09:00:13 WARNING api-gateway: CPU usage at 91% - request queue building up\n2026-04-24 09:00:14 ERROR notification-service: Cannot reach order-service - skipping alerts\n2026-04-24 09:00:15 CRITICAL system: Memory at 95% - out of memory condition approaching\n2026-04-24 09:00:16 ERROR db-service: Connection pool exhausted - max 100 connections reached\n2026-04-24 09:00:17 CRITICAL db-service: Database connection failed\n2026-04-24 09:00:18 WARNING api-gateway: Response timeout on /api/checkout after 8000ms",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "auth-service database connection failure",
+          "risk_score": 9.5,
+          "explanation": "auth-service failed to connect to the database, causing a cascade failure",
+          "suggestion": "Restart the auth-service pod and check database connection settings"
+        },
+        {
+          "issue": "payment-service crash due to auth-service failure",
+          "risk_score": 9,
+          "explanation": "payment-service crashed because it couldn't verify user tokens due to auth-service being down",
+          "suggestion": "Scale up db-service replicas to handle increased load and restart payment-service"
+        },
+        {
+          "issue": "order-service server crash due to payment-service failure",
+          "risk_score": 8.5,
+          "explanation": "order-service crashed due to too many failed requests caused by payment-service crash",
+          "suggestion": "Check order-service circuit breaker and restart the service"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "high CPU usage on api-gateway",
+          "risk_score": 6,
+          "explanation": "api-gateway CPU usage is at 91%, causing request queue to build up",
+          "suggestion": "Scale up api-gateway replicas to handle increased load"
+        },
+        {
+          "warning": "high memory usage system-wide",
+          "risk_score": 7,
+          "explanation": "system memory is at 95%, approaching out of memory condition",
+          "suggestion": "Check for memory leaks and scale up system resources"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "auth-service failed → triggered db-service overload → caused payment-service crash → led to order-service server crash",
+      "failure_prediction": {
+        "probability": 85,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 4 seconds on auth-service",
+          "payment-service aborted 143 pending transactions due to auth-service failure",
+          "system memory usage reached 95% and CPU usage at 91% on api-gateway"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777012933148,
+    "timestamp": "2026-04-24T06:42:13.148Z",
+    "domain": "cloud",
+    "totalLogs": 15,
+    "severity": "HIGH",
+    "overall_risk_score": 8.8,
+    "ruleAlerts": 10,
+    "logs": "2026-04-24 09:00:01 INFO  auth-service: User login successful for user_id=1042\n2026-04-24 09:00:03 ERROR auth-service: Database connection failed - retrying (attempt 1/3)\n2026-04-24 09:00:05 ERROR auth-service: Database connection failed - retrying (attempt 2/3)\n2026-04-24 09:00:07 CRITICAL auth-service: Database connection failed - giving up!\n2026-04-24 09:00:08 ERROR api-gateway: auth-service is unreachable - circuit breaker opened\n2026-04-24 09:00:09 ERROR payment-service: Cannot verify user token - auth-service down\n2026-04-24 09:00:10 CRITICAL payment-service: Aborting 143 pending transactions\n2026-04-24 09:00:11 ERROR order-service: Payment verification timeout after 5000ms\n2026-04-24 09:00:12 CRITICAL order-service: Server crashed - too many failed requests\n2026-04-24 09:00:13 WARNING api-gateway: CPU usage at 91% - request queue building up\n2026-04-24 09:00:14 ERROR notification-service: Cannot reach order-service - skipping alerts\n2026-04-24 09:00:15 CRITICAL system: Memory at 95% - out of memory condition approaching\n2026-04-24 09:00:16 ERROR db-service: Connection pool exhausted - max 100 connections reached\n2026-04-24 09:00:17 CRITICAL db-service: Database connection failed\n2026-04-24 09:00:18 WARNING api-gateway: Response timeout on /api/checkout after 8000ms",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9,
+          "explanation": "The database connection failed multiple times, causing a chain reaction of errors across services",
+          "suggestion": "Check AWS CloudWatch for service health and consider enabling cross-region failover for the database"
+        },
+        {
+          "issue": "Resource exhaustion",
+          "risk_score": 8.5,
+          "explanation": "CPU and memory usage are critically high, leading to service crashes and timeouts",
+          "suggestion": "Increase EC2 instance type to handle the increased load and consider using autoscaling to adjust resources dynamically"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "CPU usage and request queue buildup",
+          "risk_score": 6,
+          "explanation": "High CPU usage and request queue buildup can lead to further service degradation",
+          "suggestion": "Monitor CPU usage and adjust instance types or enable autoscaling to prevent queue buildup"
+        },
+        {
+          "warning": "Connection pool exhaustion",
+          "risk_score": 5.5,
+          "explanation": "The connection pool is exhausted, which can lead to further database connection failures",
+          "suggestion": "Increase the connection pool size and consider using a connection pooling strategy to prevent exhaustion"
+        }
+      ],
+      "overall_risk_score": 8.8,
+      "summary": "The AWS US-East-1 region is experiencing a high-risk situation due to database connection failures, resource exhaustion, and high CPU usage, affecting the auth-service, api-gateway, and order-service",
+      "failure_prediction": {
+        "probability": 85,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 2 minutes",
+          "CPU usage at 91% and memory at 95% on the api-gateway and db-service instances",
+          "143 pending transactions aborted on the payment-service due to auth-service downtime"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777012958595,
+    "timestamp": "2026-04-24T06:42:38.595Z",
+    "domain": "webserver",
+    "totalLogs": 16,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 5,
+    "logs": "2026-04-24 10:00:01 INFO  nginx: Server started on port 80 - worker_processes=4\n2026-04-24 10:00:45 INFO  nginx: GET /home 200 12ms\n2026-04-24 10:01:00 INFO  nginx: GET /api/products 200 45ms\n2026-04-24 10:02:00 WARNING nginx: Incoming traffic spike - 3400 requests/min detected\n2026-04-24 10:02:01 ERROR nginx: GET /api/checkout 503 - upstream not responding\n2026-04-24 10:02:02 ERROR nginx: GET /api/checkout 503 - upstream not responding\n2026-04-24 10:02:03 ERROR nginx: GET /api/checkout 503 - upstream not responding\n2026-04-24 10:02:04 WARNING SSL: Certificate for api.myapp.com expires in 3 days\n2026-04-24 10:02:05 ERROR nginx: worker process crashed - restarting\n2026-04-24 10:02:06 ERROR nginx: worker process crashed - restarting\n2026-04-24 10:02:07 CRITICAL nginx: All worker processes down - server not responding\n2026-04-24 10:02:08 ERROR node: ECONNREFUSED - port 3000 not accepting connections\n2026-04-24 10:02:09 WARNING nginx: CPU at 88% - worker queue at 94% capacity\n2026-04-24 10:02:10 ERROR nginx: GET /api/payment 504 Gateway Timeout after 30000ms\n2026-04-24 10:02:11 WARNING nginx: Authentication failed for IP 192.168.1.105\n2026-04-24 10:02:12 CRITICAL nginx: Disk space only 6% remaining - access logs too large",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Worker process crashes",
+          "risk_score": 9,
+          "explanation": "Multiple worker process crashes indicate a server configuration issue",
+          "suggestion": "Increase worker_processes in nginx.conf and optimize server configuration"
+        },
+        {
+          "issue": "Upstream not responding",
+          "risk_score": 8.5,
+          "explanation": "Repeated 503 errors indicate an issue with the upstream server",
+          "suggestion": "Check and restart the upstream server or adjust the load balancer configuration"
+        },
+        {
+          "issue": "_disk space low",
+          "risk_score": 8,
+          "explanation": "Low disk space can cause server crashes and data loss",
+          "suggestion": "Increase disk space or configure log rotation and cleanup"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "Incoming traffic spike",
+          "risk_score": 5,
+          "explanation": "Traffic spike can cause server overload and slow response times",
+          "suggestion": "Enable rate limiting on the load balancer and monitor traffic patterns"
+        },
+        {
+          "warning": "SSL certificate expiration",
+          "risk_score": 4.5,
+          "explanation": "Expire SSL certificate can cause security issues and browser warnings",
+          "suggestion": "Renew the SSL certificate for api.myapp.com"
+        },
+        {
+          "warning": "High CPU usage",
+          "risk_score": 4,
+          "explanation": "High CPU usage can cause server slowdown and crashes",
+          "suggestion": "Optimize server configuration and adjust worker queue capacity"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "The server is experiencing a combination of traffic-related and server-related issues, including worker process crashes, upstream server errors, and low disk space",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Worker process crashed 2 times in 1 minute",
+          "Upstream server returned 503 errors 3 times in a row",
+          "Disk space is only 6% remaining and access logs are too large"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777012986282,
+    "timestamp": "2026-04-24T06:43:06.282Z",
+    "domain": "cloud",
+    "totalLogs": 15,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 6,
+    "logs": "2026-04-24 11:00:01 INFO  aws: EC2 instance i-0abc123def us-east-1a running normally\n2026-04-24 11:00:30 INFO  aws: Auto-scaling group healthy - 4 instances active\n2026-04-24 11:01:00 WARNING aws: EC2 instance i-0abc123def CPU at 87% - approaching limit\n2026-04-24 11:01:30 WARNING aws: RDS instance db-prod-01 memory at 82% - slow queries detected\n2026-04-24 11:02:00 ERROR aws: EC2 instance i-0abc123def failed health check in us-east-1a\n2026-04-24 11:02:01 ERROR aws: EC2 instance i-0def456ghi failed health check in us-east-1a\n2026-04-24 11:02:02 CRITICAL aws: us-east-1a availability zone - connectivity issues detected\n2026-04-24 11:02:03 ERROR aws: S3 bucket my-app-storage RequestTimeout - region us-east-1\n2026-04-24 11:02:04 CRITICAL aws: Lambda function payment-processor throttled - quota exceeded\n2026-04-24 11:02:05 ERROR aws: Auto-scaling failed - EC2 quota limit reached in us-east-1\n2026-04-24 11:02:06 CRITICAL aws: RDS instance db-prod-01 - database connection failed\n2026-04-24 11:02:07 WARNING aws: CloudFront distribution - origin response timeout 30000ms\n2026-04-24 11:02:08 ERROR aws: ElastiCache cluster cache-prod memory at 95% - evictions high\n2026-04-24 11:02:09 CRITICAL aws: EC2 instance i-0abc123def terminated unexpectedly us-east-1a\n2026-04-24 11:02:10 WARNING aws: Billing alert - current month spend $4,300 exceeds threshold",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "EC2 instance failure and quota limit reached",
+          "risk_score": 9.5,
+          "explanation": "Multiple EC2 instances failed health checks and the auto-scaling group reached its quota limit, indicating a potential scaling issue",
+          "suggestion": "Enable cross-region failover and increase EC2 instance quota limit"
+        },
+        {
+          "issue": "RDS instance database connection failure",
+          "risk_score": 9,
+          "explanation": "The RDS instance db-prod-01 experienced a database connection failure, which could impact application performance",
+          "suggestion": "Check RDS instance configuration and enable multi-AZ deployment"
+        },
+        {
+          "issue": "Lambda function throttling due to quota exceeded",
+          "risk_score": 8.5,
+          "explanation": "The Lambda function payment-processor was throttled due to exceeding its quota limit, which could impact payment processing",
+          "suggestion": "Increase Lambda function quota limit and monitor its usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU and memory usage",
+          "risk_score": 6,
+          "explanation": "EC2 instance i-0abc123def and RDS instance db-prod-01 are experiencing high CPU and memory usage, which could lead to performance issues",
+          "suggestion": "Monitor instance performance and adjust instance types as needed"
+        },
+        {
+          "warning": "CloudFront distribution origin response timeout",
+          "risk_score": 5,
+          "explanation": "The CloudFront distribution is experiencing origin response timeouts, which could impact content delivery",
+          "suggestion": "Check CloudFront distribution configuration and origin server performance"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "Multiple critical issues detected in us-east-1 region, including EC2 instance failures, RDS database connection failures, and Lambda function throttling, indicating a high risk of service disruption",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "EC2 instance i-0abc123def failed health check in us-east-1a",
+          "RDS instance db-prod-01 database connection failed",
+          "Lambda function payment-processor throttled due to quota exceeded"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777013774507,
+    "timestamp": "2026-04-24T06:56:14.507Z",
+    "domain": "microservices",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 3,
+    "logs": "2026-04-24 11:00:01 INFO  aws: EC2 instance i-0abc123def us-east-1a running normally\n2026-04-24 11:01:00 WARNING aws: EC2 instance i-0abc123def CPU at 87%\n2026-04-24 11:01:30 WARNING aws: RDS instance db-prod-01 memory at 82%\n2026-04-24 11:02:00 ERROR aws: EC2 instance i-0abc123def failed health check us-east-1a\n2026-04-24 11:02:02 CRITICAL aws: us-east-1a availability zone connectivity issues\n2026-04-24 11:02:04 CRITICAL aws: Lambda function payment-processor throttled quota exceeded\n2026-04-24 11:02:05 ERROR aws: Auto-scaling failed EC2 quota limit reached us-east-1\n2026-04-24 11:02:06 CRITICAL aws: RDS instance db-prod-01 database connection failed\n2026-04-24 11:02:09 CRITICAL aws: EC2 instance i-0abc123def terminated unexpectedly",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "EC2 instance failure",
+          "risk_score": 9,
+          "explanation": "EC2 instance i-0abc123def failed health check and was terminated unexpectedly",
+          "suggestion": "Restart the EC2 instance i-0abc123def and check for any software or configuration issues"
+        },
+        {
+          "issue": "RDS instance database connection failure",
+          "risk_score": 8.5,
+          "explanation": "RDS instance db-prod-01 database connection failed, which may cause cascade failures in dependent services",
+          "suggestion": "Check the RDS instance db-prod-01 for any configuration or connection issues and restart if necessary"
+        },
+        {
+          "issue": "Lambda function throttling",
+          "risk_score": 8,
+          "explanation": "Lambda function payment-processor was throttled due to quota exceeded, which may cause payment processing delays",
+          "suggestion": "Increase the quota limit for the Lambda function payment-processor or optimize the function to handle the current load"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 5,
+          "explanation": "EC2 instance i-0abc123def CPU usage was at 87%, which may cause performance issues",
+          "suggestion": "Check the EC2 instance i-0abc123def for any resource-intensive processes and optimize if necessary"
+        },
+        {
+          "warning": "High memory usage",
+          "risk_score": 5,
+          "explanation": "RDS instance db-prod-01 memory usage was at 82%, which may cause performance issues",
+          "suggestion": "Check the RDS instance db-prod-01 for any memory-intensive queries and optimize if necessary"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "EC2 instance i-0abc123def failed health check → triggered RDS instance db-prod-01 database connection failure → caused Lambda function payment-processor to be throttled",
+      "failure_prediction": {
+        "probability": 85,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "EC2 instance i-0abc123def failed health check 1 time in 2 minutes",
+          "RDS instance db-prod-01 database connection failed 1 time in 2 minutes",
+          "Lambda function payment-processor was throttled 1 time in 2 minutes due to quota exceeded"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777024501419,
+    "timestamp": "2026-04-24T09:55:01.419Z",
+    "domain": "cloud",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.5,
+    "ruleAlerts": 3,
+    "logs": "2026-04-24 11:00:01 INFO  aws: EC2 instance i-0abc123def us-east-1a running normally\n2026-04-24 11:01:00 WARNING aws: EC2 instance i-0abc123def CPU at 87%.\n2026-04-24 11:01:30 WARNING aws: RDS instance db-prod-01 memory at 82%.\n2026-04-24 11:02:00 ERROR aws: EC2 instance i-0abc123def failed health check us-east-1a\n2026-04-24 11:02:02 CRITICAL aws: us-east-1a availability zone connectivity issues\n2026-04-24 11:02:04 CRITICAL aws: Lambda function payment-processor throttled quota exceeded\n2026-04-24 11:02:05 ERROR aws: Auto-scaling failed EC2 quota limit reached us-east-1\n2026-04-24 11:02:06 CRITICAL aws: RDS instance db-prod-01 database connection failed\n2026-04-24 11:02:09 CRITICAL aws: EC2 instance i-0abc123def terminated unexpectedly",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "EC2 instance failure and auto-scaling quota limit",
+          "risk_score": 9.5,
+          "explanation": "The EC2 instance failed a health check and auto-scaling was unable to launch new instances due to quota limits",
+          "suggestion": "Increase EC2 instance quota limits and check AWS CloudWatch for service health"
+        },
+        {
+          "issue": "RDS instance database connection failure",
+          "risk_score": 9,
+          "explanation": "The RDS instance db-prod-01 had a database connection failure",
+          "suggestion": "Check RDS instance configuration and enable cross-region failover"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage on EC2 instance",
+          "risk_score": 6,
+          "explanation": "The EC2 instance i-0abc123def had high CPU usage at 87%",
+          "suggestion": "Increase EC2 instance type or adjust workload"
+        },
+        {
+          "warning": "High memory usage on RDS instance",
+          "risk_score": 5.5,
+          "explanation": "The RDS instance db-prod-01 had high memory usage at 82%",
+          "suggestion": "Increase RDS instance type or adjust database configuration"
+        }
+      ],
+      "overall_risk_score": 8.5,
+      "summary": "The AWS us-east-1 region is experiencing critical issues with EC2 and RDS instances, as well as auto-scaling quota limits, which may cause service outages",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "EC2 instance i-0abc123def failed health check at 11:02:00",
+          "RDS instance db-prod-01 database connection failed at 11:02:06",
+          "Lambda function payment-processor was throttled due to quota exceeded at 11:02:04"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777030304610,
+    "timestamp": "2026-04-24T11:31:44.610Z",
+    "domain": "microservices",
+    "totalLogs": 9,
+    "severity": "HIGH",
+    "overall_risk_score": 8.2,
+    "ruleAlerts": 9,
+    "logs": "CRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Database connection failed\nCRITICAL: Server crashed unexpectedly\nERROR: Out of memory - heap size exceeded\nERROR: Authentication failed for user admin\nWARNING: CPU usage at 95%\nWARNING: memory usage at 87%\nWARNING: Disk space low - only 3GB remaining",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database connection failure",
+          "risk_score": 9.5,
+          "explanation": "Database connection failed multiple times, causing service disruption",
+          "suggestion": "Restart the db-service pod and check database configuration"
+        },
+        {
+          "issue": "Server crash",
+          "risk_score": 8,
+          "explanation": "Server crashed unexpectedly, potentially due to resource overload",
+          "suggestion": "Scale up server resources and check for software updates"
+        },
+        {
+          "issue": "Memory overflow",
+          "risk_score": 8.5,
+          "explanation": "Out of memory error due to heap size exceeded, causing service instability",
+          "suggestion": "Increase heap size and optimize memory usage"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "High CPU usage",
+          "risk_score": 6,
+          "explanation": "CPU usage at 95%, potentially causing slow service response",
+          "suggestion": "Check api-gateway circuit breaker and scale up CPU resources"
+        },
+        {
+          "warning": "Low disk space",
+          "risk_score": 5.5,
+          "explanation": "Only 3GB disk space remaining, potentially causing service disruption",
+          "suggestion": "Increase disk space and optimize storage usage"
+        }
+      ],
+      "overall_risk_score": 8.2,
+      "summary": "db-service failed → triggered api-gateway overload → caused payment-service instability",
+      "failure_prediction": {
+        "probability": 85,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database failed 3 times in 1 minute",
+          "Server crashed with out of memory error",
+          "CPU usage at 95% for 2 minutes"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777030399268,
+    "timestamp": "2026-04-24T11:33:19.268Z",
+    "domain": "microservices",
+    "totalLogs": 13,
+    "severity": "HIGH",
+    "overall_risk_score": 8.8,
+    "ruleAlerts": 9,
+    "logs": "2026-04-24 09:00:01 INFO  auth-service: User login successful user_id=1042\n2026-04-24 09:00:03 ERROR auth-service: Database connection failed retrying attempt 1/3\n2026-04-24 09:00:05 ERROR auth-service: Database connection failed retrying attempt 2/3\n2026-04-24 09:00:07 CRITICAL auth-service: Database connection failed giving up\n2026-04-24 09:00:08 ERROR api-gateway: auth-service unreachable circuit breaker opened\n2026-04-24 09:00:09 ERROR payment-service: Cannot verify user token auth-service down\n2026-04-24 09:00:10 CRITICAL payment-service: Aborting 143 pending transactions\n2026-04-24 09:00:11 ERROR order-service: Payment verification timeout 5000ms\n2026-04-24 09:00:12 CRITICAL order-service: Server crashed too many failed requests\n2026-04-24 09:00:13 WARNING api-gateway: CPU usage at 91% request queue building up\n2026-04-24 09:00:15 CRITICAL system: Memory at 95% out of memory condition approaching\n2026-04-24 09:00:16 ERROR db-service: Connection pool exhausted max 100 connections\n2026-04-24 09:00:17 CRITICAL db-service: Database connection failed",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "auth-service database connection failure",
+          "risk_score": 9.5,
+          "explanation": "auth-service failed to connect to the database, causing a cascade of failures",
+          "suggestion": "Restart the auth-service pod and check database connection settings"
+        },
+        {
+          "issue": "payment-service abortion of pending transactions",
+          "risk_score": 8.8,
+          "explanation": "payment-service had to abort 143 pending transactions due to auth-service failure",
+          "suggestion": "Scale up payment-service replicas to handle the failed transactions"
+        },
+        {
+          "issue": "order-service server crash",
+          "risk_score": 8.2,
+          "explanation": "order-service crashed due to payment-service verification timeout",
+          "suggestion": "Check order-service circuit breaker settings and restart the server"
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "api-gateway high CPU usage",
+          "risk_score": 6.5,
+          "explanation": "api-gateway CPU usage is at 91%, which can lead to performance issues",
+          "suggestion": "Check api-gateway circuit breaker settings and scale up replicas if necessary"
+        },
+        {
+          "warning": "system memory usage",
+          "risk_score": 6,
+          "explanation": "system memory usage is at 95%, which can lead to out-of-memory conditions",
+          "suggestion": "Check system resource allocation and consider scaling up resources"
+        }
+      ],
+      "overall_risk_score": 8.8,
+      "summary": "auth-service failed → triggered db-service overload → caused payment-service crash → led to order-service server crash",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 6 seconds for auth-service",
+          "Payment-service aborted 143 pending transactions in 1 second",
+          "System memory usage reached 95% and CPU usage reached 91% for api-gateway"
+        ]
+      }
+    }
+  },
+  {
+    "id": 1777030408732,
+    "timestamp": "2026-04-24T11:33:28.732Z",
+    "domain": "webserver",
+    "totalLogs": 13,
+    "severity": "HIGH",
+    "overall_risk_score": 8.9,
+    "ruleAlerts": 9,
+    "logs": "2026-04-24 09:00:01 INFO  auth-service: User login successful user_id=1042\n2026-04-24 09:00:03 ERROR auth-service: Database connection failed retrying attempt 1/3\n2026-04-24 09:00:05 ERROR auth-service: Database connection failed retrying attempt 2/3\n2026-04-24 09:00:07 CRITICAL auth-service: Database connection failed giving up\n2026-04-24 09:00:08 ERROR api-gateway: auth-service unreachable circuit breaker opened\n2026-04-24 09:00:09 ERROR payment-service: Cannot verify user token auth-service down\n2026-04-24 09:00:10 CRITICAL payment-service: Aborting 143 pending transactions\n2026-04-24 09:00:11 ERROR order-service: Payment verification timeout 5000ms\n2026-04-24 09:00:12 CRITICAL order-service: Server crashed too many failed requests\n2026-04-24 09:00:13 WARNING api-gateway: CPU usage at 91% request queue building up\n2026-04-24 09:00:15 CRITICAL system: Memory at 95% out of memory condition approaching\n2026-04-24 09:00:16 ERROR db-service: Connection pool exhausted max 100 connections\n2026-04-24 09:00:17 CRITICAL db-service: Database connection failed",
+    "analysis": {
+      "severity": "HIGH",
+      "issues": [
+        {
+          "issue": "Database Connection Failure",
+          "risk_score": 9.5,
+          "explanation": "The database connection failed multiple times, causing a chain reaction of errors and service crashes.",
+          "suggestion": "Increase the database connection pool size and optimize database queries to reduce the load."
+        },
+        {
+          "issue": "Server Resource Exhaustion",
+          "risk_score": 8.8,
+          "explanation": "High CPU and memory usage are causing server crashes and out-of-memory conditions.",
+          "suggestion": "Increase worker_processes in nginx.conf and consider adding more servers to the cluster to distribute the load."
+        }
+      ],
+      "warnings": [
+        {
+          "warning": "CPU Usage Warning",
+          "risk_score": 5.5,
+          "explanation": "CPU usage is at 91%, which can cause request queue buildup and slow down the system.",
+          "suggestion": "Enable rate limiting on the load balancer to prevent excessive requests and reduce CPU load."
+        }
+      ],
+      "overall_risk_score": 8.9,
+      "summary": "The system is experiencing a configuration issue with database connections and server resource exhaustion, exacerbated by traffic-related issues.",
+      "failure_prediction": {
+        "probability": 92,
+        "time_window": "next 5-10 minutes",
+        "confidence": "HIGH",
+        "signals": [
+          "Database connection failed 3 times in 7 seconds",
+          "CPU usage reached 91% and request queue is building up",
+          "Memory usage reached 95% and an out-of-memory condition is approaching"
+        ]
+      }
+    }
+  }
+]
