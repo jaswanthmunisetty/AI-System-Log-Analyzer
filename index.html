@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Log Analyzer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #0f0f0f; color: #fff; min-height: 100vh; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #00ff88; font-size: 2rem; text-align: center; margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #888; margin-bottom: 20px; }
+
+        textarea {
+            width: 100%; height: 200px; background: #1a1a1a;
+            border: 1px solid #333; border-radius: 10px;
+            padding: 15px; color: #fff; font-size: 14px;
+            resize: vertical; outline: none;
+        }
+        textarea:focus { border-color: #00ff88; }
+
+        /* DOMAIN SELECTOR */
+        .domain-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .domain-label {
+            font-size: 13px;
+            color: #888;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        #domainSelect {
+            flex: 1;
+            padding: 11px 15px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+            transition: border-color 0.2s;
+        }
+        #domainSelect:focus { border-color: #00ff88; }
+        #domainSelect option { background: #1a1a1a; }
+
+        .domain-badge {
+            display: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            background: #00ff8820;
+            color: #00ff88;
+            border: 1px solid #00ff8840;
+            white-space: nowrap;
+        }
+
+        .btn-row { display: flex; gap: 10px; margin-top: 10px; }
+
+        button {
+            flex: 1; padding: 12px; border: none;
+            border-radius: 10px; font-size: 14px;
+            font-weight: bold; cursor: pointer;
+        }
+
+        .analyze-btn { background: #00ff88; color: #000; }
+        .analyze-btn:disabled { background: #333; color: #666; cursor: not-allowed; }
+        .clear-btn { background: #ff4444; color: #fff; flex: 0.4; }
+
+        .loading { text-align: center; color: #00ff88; margin-top: 20px; display: none; }
+
+        .timer-box {
+            background: #1a1a1a; border-radius: 10px;
+            padding: 12px 20px; margin-top: 15px;
+            display: none; justify-content: space-between; align-items: center;
+        }
+        .timer-value { color: #00ff88; font-size: 20px; font-weight: bold; }
+        .timer-status { color: #ffaa00; font-size: 13px; }
+
+        .counters { display: none; gap: 10px; margin-top: 15px; }
+        .counter-box {
+            flex: 1; background: #1a1a1a; border-radius: 10px;
+            padding: 15px; text-align: center;
+        }
+        .counter-box h4 { font-size: 12px; margin-bottom: 5px; }
+        .counter-box span { font-size: 28px; font-weight: bold; }
+
+        .severity-banner {
+            text-align: center; padding: 15px; border-radius: 10px;
+            margin-top: 20px; font-size: 1.5rem; font-weight: bold; display: none;
+        }
+        .severity-HIGH { background: #ff444422; border: 2px solid #ff4444; color: #ff4444; }
+        .severity-MEDIUM { background: #ffaa0022; border: 2px solid #ffaa00; color: #ffaa00; }
+        .severity-LOW { background: #00ff8822; border: 2px solid #00ff88; color: #00ff88; }
+
+        /* DOMAIN INDICATOR shown in results */
+        .domain-indicator {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-top: 16px;
+            border-left: 4px solid #00ff88;
+        }
+        .domain-indicator-icon { font-size: 18px; }
+        .domain-indicator-text { font-size: 13px; color: #888; }
+        .domain-indicator-name { font-size: 14px; font-weight: bold; color: #00ff88; }
+
+        .results { margin-top: 20px; }
+
+        .section-title {
+            font-size: 0.9rem; color: #888; margin: 20px 0 10px 0;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .summary-box {
+            background: #1a1a1a; border-radius: 10px;
+            padding: 20px; margin-bottom: 15px; border-left: 4px solid #00ff88;
+        }
+        .summary-box p { color: #ccc; line-height: 1.6; }
+
+        .issue-item {
+            background: #1a1a1a; border-radius: 8px;
+            padding: 15px; margin-bottom: 10px; border-left: 4px solid #ff4444;
+        }
+        .warn-item {
+            background: #1a1a1a; border-radius: 8px;
+            padding: 15px; margin-bottom: 10px; border-left: 4px solid #ffaa00;
+        }
+        .item-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .item-name-red { font-weight: bold; color: #ff4444; }
+        .item-name-yellow { font-weight: bold; color: #ffaa00; }
+        .risk-badge { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        .risk-high { background: #ff444433; color: #ff4444; }
+        .risk-medium { background: #ffaa0033; color: #ffaa00; }
+        .risk-low { background: #00ff8833; color: #00ff88; }
+        .item-explanation { color: #aaa; font-size: 13px; margin-bottom: 5px; }
+        .item-suggestion { color: #00ff88; font-size: 13px; }
+
+        .risk-bar { height: 6px; background: #333; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+        .risk-bar-fill { height: 100%; border-radius: 3px; }
+
+        .rule-item {
+            background: #1a1a1a; border-radius: 8px;
+            padding: 12px 15px; margin-bottom: 8px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .rule-msg { color: #ccc; font-size: 14px; }
+        .rule-critical { color: #ff4444; font-weight: bold; font-size: 12px; }
+        .rule-warning { color: #ffaa00; font-weight: bold; font-size: 12px; }
+
+        .pred-item {
+            background: #1a1a1a; border-radius: 8px;
+            padding: 15px; margin-bottom: 10px; border-left: 3px solid #ff6600;
+        }
+        .pred-header { display: flex; justify-content: space-between; margin-bottom: 5px; }
+        .pred-pattern { color: #ff6600; font-weight: bold; font-size: 13px; }
+        .pred-count { color: #888; font-size: 12px; }
+        .pred-text { color: #ccc; font-size: 13px; }
+
+        .no-data { color: #555; font-size: 13px; text-align: center; padding: 10px; }
+
+        .download-btn {
+            width: 100%; padding: 12px; background: #1a1a1a;
+            color: #00ff88; border: 1px solid #00ff88;
+            border-radius: 10px; font-size: 14px; cursor: pointer; margin-top: 10px;
+        }
+        .download-btn:hover { background: #00ff88; color: #000; }
+
+        /* AI FAILURE PREDICTION CARD */
+        .prediction-card {
+            background: #1a1a1a; border-radius: 10px;
+            padding: 20px; margin-top: 10px; border: 2px solid #ff6600;
+        }
+        .pred-prob-row {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 12px;
+        }
+        .pred-prob-number {
+            font-size: 2.8rem; font-weight: bold;
+            color: #ff6600; line-height: 1;
+        }
+        .pred-prob-label {
+            font-size: 12px; color: #888;
+            text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;
+        }
+        .pred-time {
+            font-size: 0.95rem; font-weight: bold;
+            padding: 8px 16px; border-radius: 20px;
+            border: 1px solid #ff6600; color: #ff6600;
+            background: #ff660015; text-align: center;
+        }
+        .pred-prob-bar {
+            height: 10px; background: #2a2a2a;
+            border-radius: 5px; overflow: hidden; margin-bottom: 16px;
+        }
+        .pred-prob-fill {
+            height: 100%; border-radius: 5px;
+            background: #ff6600; transition: width 0.8s ease;
+        }
+        .pred-confidence {
+            font-size: 12px; color: #666;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;
+        }
+        .pred-signals-title {
+            font-size: 12px; color: #888;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 10px; padding-bottom: 6px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .pred-signal-item {
+            color: #ccc; font-size: 13px;
+            padding: 8px 0; border-bottom: 1px solid #1f1f1f;
+            display: flex; align-items: center; gap: 10px; line-height: 1.4;
+        }
+        .pred-signal-item:last-child { border-bottom: none; }
+        .signal-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: #ff6600; flex-shrink: 0;
+        }
+        .pred-no-risk {
+            color: #00ff88; font-size: 14px;
+            text-align: center; padding: 10px 0 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔍 AI Log Analyzer</h1>
+    <p class="subtitle">Paste your logs — AI will analyze and predict failures!</p>
+
+    <textarea id="logsInput" placeholder="Paste your logs here...
+Example:
+CRITICAL: Database connection failed
+ERROR: Server crashed
+WARNING: CPU usage at 95%"></textarea>
+
+    <!-- DOMAIN SELECTOR -->
+    <div class="domain-row">
+        <span class="domain-label">System type:</span>
+        <select id="domainSelect" onchange="updateDomainBadge()">
+            <option value="microservices">🔗 Microservices / Distributed Systems</option>
+            <option value="webserver">🌐 Web Server (Nginx / Apache / Node)</option>
+            <option value="cloud">☁️ Cloud Infrastructure (AWS / Azure / GCP)</option>
+        </select>
+    </div>
+
+    <div class="btn-row">
+        <button class="analyze-btn" id="analyzeBtn" onclick="analyzeLogs()">⚡ Analyze Logs</button>
+        <button class="clear-btn" onclick="clearAll()">🗑️ Clear</button>
+    </div>
+
+    <div class="loading" id="loading">🤖 AI is analyzing your logs...</div>
+
+    <div class="timer-box" id="timerBox">
+        <span style="color:#888; font-size:13px">⏱️ Analysis Time</span>
+        <span class="timer-value" id="timerValue">0.0s</span>
+        <span class="timer-status" id="timerStatus">Running...</span>
+    </div>
+
+    <div class="counters" id="counters">
+        <div class="counter-box">
+            <h4 style="color:#00ff88">TOTAL LOGS</h4>
+            <span style="color:#00ff88" id="totalCount">0</span>
+        </div>
+        <div class="counter-box">
+            <h4 style="color:#ff4444">CRITICAL</h4>
+            <span style="color:#ff4444" id="criticalCount">0</span>
+        </div>
+        <div class="counter-box">
+            <h4 style="color:#ffaa00">WARNINGS</h4>
+            <span style="color:#ffaa00" id="warningCount">0</span>
+        </div>
+        <div class="counter-box">
+            <h4 style="color:#ff6600">RISK SCORE</h4>
+            <span style="color:#ff6600" id="riskScore">-</span>
+        </div>
+    </div>
+
+    <div class="severity-banner" id="severityBanner"></div>
+
+    <div class="results" id="results" style="display:none">
+
+
+<!-- Domain Mismatch Warning Banner -->
+<div id="domainWarning" style="
+    display: none;
+    margin-top: 12px;
+    padding: 14px 18px;
+    background: #ff440015;
+    border: 1px solid #ff4444;
+    border-radius: 10px;
+    border-left: 4px solid #ff4444;
+">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:gap">
+
+        <!-- Left: warning text -->
+        <div>
+            <p style="color:#ff4444; font-weight:bold; font-size:14px; margin-bottom:4px">
+                ⚠️ Wrong Domain Type Selected!
+            </p>
+            <p id="warningText" style="color:#aaa; font-size:13px;"></p>
+        </div>
+
+        <!-- Right: auto-fix button -->
+        <button 
+            id="autoFixBtn"
+            onclick="autoFixDomain()"
+            style="
+                padding: 8px 16px;
+                background: #00ff88;
+                color: #000;
+                border: none;
+                border-radius: 8px;
+                font-size: 13px;
+                font-weight: bold;
+                cursor: pointer;
+                white-space: nowrap;
+                margin-left: 12px;
+            "
+        >
+            ✅ Auto Fix
+        </button>
+    </div>
+
+    <!-- Score bar to show why it detected that domain -->
+    <div id="scoreBreakdown" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;"></div>
+</div>
+
+
+        <!-- DOMAIN INDICATOR -->
+        <div class="domain-indicator" id="domainIndicator">
+            <span class="domain-indicator-icon" id="domainIcon"></span>
+            <div>
+                <div class="domain-indicator-text">Analyzed as</div>
+                <div class="domain-indicator-name" id="domainName"></div>
+            </div>
+        </div>
+
+        <p class="section-title">📋 AI Summary</p>
+        <div class="summary-box">
+            <p id="summaryText"></p>
+        </div>
+
+        <p class="section-title">🔮 AI Failure Prediction</p>
+        <div id="aiPredictionCard"></div>
+
+        <p class="section-title">🔴 Critical Issues</p>
+        <div id="issuesList"></div>
+
+        <p class="section-title">🟡 Warnings</p>
+        <div id="warningsList"></div>
+
+        <p class="section-title">⚙️ Rule Based Alerts</p>
+        <div id="rulesList"></div>
+
+        <p class="section-title">📊 Pattern-Based Predictions</p>
+        <div id="predictionsList"></div>
+
+        <button class="download-btn" onclick="downloadReport()">⬇️ Download Report</button>
+    </div>
+</div>
+
+<script>
+    let timerInterval = null;
+    let startTime = null;
+    let lastData = null;
+
+    const domainMeta = {
+        microservices: { icon: "🔗", name: "Microservices / Distributed Systems" },
+        webserver:     { icon: "🌐", name: "Web Server (Nginx / Apache / Node)"  },
+        cloud:         { icon: "☁️",  name: "Cloud Infrastructure (AWS / Azure / GCP)" }
+    };
+
+    function updateDomainBadge() {}
+
+    function getRiskColor(score) {
+        if (score >= 7) return "#ff4444";
+        if (score >= 4) return "#ffaa00";
+        return "#00ff88";
+    }
+
+    function getRiskClass(score) {
+        if (score >= 7) return "risk-high";
+        if (score >= 4) return "risk-medium";
+        return "risk-low";
+    }
+
+    function renderAIPrediction(prediction) {
+        const card = document.getElementById("aiPredictionCard");
+
+        if (!prediction) {
+            card.innerHTML = '<p class="no-data">No AI prediction available</p>';
+            return;
+        }
+
+        const prob       = prediction.probability || 0;
+        const timeWindow = prediction.time_window || "unknown";
+        const confidence = prediction.confidence  || "LOW";
+        const signals    = prediction.signals     || [];
+
+        const barColor =
+            prob >= 80 ? "#ff4444" :
+            prob >= 60 ? "#ff6600" :
+            prob >= 40 ? "#ffaa00" : "#00ff88";
+
+        if (prob < 40) {
+            card.innerHTML = `
+                <div class="prediction-card" style="border-color:#00ff88">
+                    <div class="pred-prob-row">
+                        <div>
+                            <div class="pred-prob-number" style="color:#00ff88">${prob}%</div>
+                            <div class="pred-prob-label">failure probability</div>
+                        </div>
+                        <span class="pred-time" style="border-color:#00ff88;color:#00ff88;background:#00ff8815">
+                            No immediate risk
+                        </span>
+                    </div>
+                    <div class="pred-prob-bar">
+                        <div class="pred-prob-fill" style="width:${prob}%;background:#00ff88"></div>
+                    </div>
+                    <p class="pred-no-risk">✅ System looks stable. Keep monitoring.</p>
+                </div>`;
+            return;
+        }
+
+        card.innerHTML = `
+            <div class="prediction-card" style="border-color:${barColor}">
+                <div class="pred-prob-row">
+                    <div>
+                        <div class="pred-prob-number" style="color:${barColor}">${prob}%</div>
+                        <div class="pred-prob-label">failure probability</div>
+                    </div>
+                    <span class="pred-time" style="border-color:${barColor};color:${barColor};background:${barColor}15">
+                        ⚠ ${timeWindow}
+                    </span>
+                </div>
+                <div class="pred-prob-bar">
+                    <div class="pred-prob-fill" style="width:${prob}%;background:${barColor}"></div>
+                </div>
+                <p class="pred-confidence">Confidence: ${confidence}</p>
+                <p class="pred-signals-title">Why this prediction?</p>
+                <div>
+                    ${signals.map(s => `
+                        <div class="pred-signal-item">
+                            <div class="signal-dot" style="background:${barColor}"></div>
+                            ${s}
+                        </div>`).join("")}
+                </div>
+            </div>`;
+    }
+
+
+    // ✅ Scans logs and guesses the domain from keywords
+function detectDomain(logs) {
+    const upper = logs.toUpperCase();
+
+    const scores = {
+        microservices: 0,
+        webserver: 0,
+        cloud: 0
+    };
+
+    // 🔗 Microservices keywords
+    const microservicesKeywords = [
+        "AUTH-SERVICE", "API-GATEWAY", "PAYMENT-SERVICE",
+        "ORDER-SERVICE", "DB-SERVICE", "NOTIFICATION-SERVICE",
+        "POD", "REPLICA", "SERVICE MESH", "CIRCUIT BREAKER",
+        "INTER-SERVICE", "KUBERNETES", "K8S", "DOCKER",
+        "CONTAINER", "MICROSERVICE", "SIDECAR", "GRPC"
+    ];
+
+    // 🌐 Web Server keywords
+    const webserverKeywords = [
+        "NGINX", "APACHE", "WORKER PROCESS", "UPSTREAM",
+        "HTTP/1", "HTTP/2", "GET /", "POST /", "PUT /",
+        "STATUS 200", "STATUS 404", "STATUS 503", "STATUS 500",
+        "GATEWAY TIMEOUT", "WORKER_PROCESSES", "ECONNREFUSED",
+        "PORT 80", "PORT 443", "PORT 3000", "RATE LIMIT",
+        "LOAD BALANCER", "REVERSE PROXY", "VHOST"
+    ];
+
+    // ☁️ Cloud keywords
+    const cloudKeywords = [
+        "EC2", "S3", "RDS", "LAMBDA", "CLOUDFRONT",
+        "ELASTICACHE", "AWS", "AZURE", "GCP", "AUTO-SCALING",
+        "AVAILABILITY ZONE", "US-EAST", "US-WEST", "EU-WEST",
+        "QUOTA", "INSTANCE", "CLOUD", "CLOUDWATCH",
+        "FARGATE", "ECS", "EKS", "BLOB STORAGE", "PUBSUB"
+    ];
+
+    // Count keyword matches for each domain
+    microservicesKeywords.forEach(kw => {
+        if (upper.includes(kw)) scores.microservices += 1;
+    });
+
+    webserverKeywords.forEach(kw => {
+        if (upper.includes(kw)) scores.webserver += 1;
+    });
+
+    cloudKeywords.forEach(kw => {
+        if (upper.includes(kw)) scores.cloud += 1;
+    });
+
+    console.log("Domain Scores:", scores); // helpful for debugging
+
+    // Find which domain scored highest
+    const maxScore = Math.max(...Object.values(scores));
+
+    // If no keywords matched at all → unknown
+    if (maxScore === 0) return { detected: "unknown", scores };
+
+    const detected = Object.keys(scores).find(k => scores[k] === maxScore);
+    return { detected, scores };
+}
+
+
+// Stores the detected domain globally so Auto Fix button can use it
+let detectedDomain = null;
+
+// Domain display names and icons
+const domainDisplay = {
+    microservices: { icon: "🔗", name: "Microservices" },
+    webserver:     { icon: "🌐", name: "Web Server"     },
+    cloud:         { icon: "☁️",  name: "Cloud"          },
+    unknown:       { icon: "❓", name: "Unknown"         }
+};
+
+// ✅ Called when user clicks Analyze — checks domain before proceeding
+function checkDomainMismatch(logs, selectedDomain) {
+    const result = detectDomain(logs);
+    detectedDomain = result.detected;
+    const scores   = result.scores;
+
+    const warning  = document.getElementById("domainWarning");
+    const warnText = document.getElementById("warningText");
+    const breakdown = document.getElementById("scoreBreakdown");
+
+    // Hide warning first (reset)
+    warning.style.display = "none";
+
+    // If unknown, can't detect — skip warning
+    if (detectedDomain === "unknown") return true;
+
+    // If detected matches selected → all good!
+    if (detectedDomain === selectedDomain) return true;
+
+    // ❌ Mismatch detected! Show warning
+    const selected = domainDisplay[selectedDomain];
+    const detected = domainDisplay[detectedDomain];
+
+    warnText.innerHTML = `
+        Your logs look like 
+        <strong style="color:#00ff88">${detected.icon} ${detected.name}</strong> logs, 
+        but you selected 
+        <strong style="color:#ff4444">${selected.icon} ${selected.name}</strong>. 
+        Analysis may give wrong results!
+    `;
+
+    // Show score breakdown
+    breakdown.innerHTML = Object.entries(scores).map(([domain, score]) => `
+        <div style="
+            background:#1a1a1a; 
+            border-radius:8px; 
+            padding:8px 14px;
+            border: 1px solid ${domain === detectedDomain ? '#00ff88' : '#333'};
+            flex:1; min-width:120px;
+        ">
+            <div style="font-size:12px; color:#888; margin-bottom:4px">
+                ${domainDisplay[domain].icon} ${domainDisplay[domain].name}
+            </div>
+            <div style="font-size:18px; font-weight:bold; 
+                color:${domain === detectedDomain ? '#00ff88' : '#fff'}">
+                ${score} match${score !== 1 ? "es" : ""}
+            </div>
+        </div>
+    `).join("");
+
+    warning.style.display = "block";
+
+    // Return false = mismatch found, but we still let user continue
+    return false;
+}
+
+// ✅ Auto Fix button — switches dropdown to correct domain
+function autoFixDomain() {
+    if (!detectedDomain || detectedDomain === "unknown") return;
+
+    document.getElementById("domainSelect").value = detectedDomain;
+    document.getElementById("domainWarning").style.display = "none";
+    
+    // Show a small confirmation
+    const banner = document.getElementById("severityBanner");
+    banner.className = "severity-banner severity-LOW";
+    banner.textContent = `✅ Domain switched to ${domainDisplay[detectedDomain].icon} ${domainDisplay[detectedDomain].name}`;
+    banner.style.display = "block";
+
+    // Hide it after 3 seconds
+    setTimeout(() => { banner.style.display = "none"; }, 3000);
+}
+
+
+    function renderDomainIndicator(domain) {
+        const meta = domainMeta[domain] || domainMeta.microservices;
+        document.getElementById("domainIcon").textContent = meta.icon;
+        document.getElementById("domainName").textContent = meta.name;
+        document.getElementById("domainIndicator").style.display = "flex";
+    }
+
+    function startTimer() {
+        startTime = Date.now();
+        document.getElementById("timerBox").style.display = "flex";
+        document.getElementById("timerStatus").textContent = "Running...";
+        document.getElementById("timerValue").textContent = "0.0s";
+        timerInterval = setInterval(() => {
+            const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+            document.getElementById("timerValue").textContent = elapsed + "s";
+        }, 100);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        if (startTime) {
+            const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+            document.getElementById("timerValue").textContent = elapsed + "s";
+            document.getElementById("timerStatus").textContent = "✅ Done!";
+        }
+    }
+
+    function countLogs(logs) {
+        const lines    = logs.split("\n").filter(l => l.trim() !== "");
+        const critical = lines.filter(l => l.toUpperCase().includes("CRITICAL") || l.toUpperCase().includes("ERROR")).length;
+        const warnings = lines.filter(l => l.toUpperCase().includes("WARNING")).length;
+        document.getElementById("totalCount").textContent = lines.length;
+        document.getElementById("criticalCount").textContent = critical;
+        document.getElementById("warningCount").textContent = warnings;
+        document.getElementById("counters").style.display = "flex";
+    }
+
+    function clearAll() {
+        document.getElementById("logsInput").value = "";
+        document.getElementById("results").style.display = "none";
+        document.getElementById("counters").style.display = "none";
+        document.getElementById("timerBox").style.display = "none";
+        document.getElementById("severityBanner").style.display = "none";
+        document.getElementById("domainIndicator").style.display = "none";
+        document.getElementById("aiPredictionCard").innerHTML = "";
+        clearInterval(timerInterval);
+        startTime = null;
+    }
+
+    async function analyzeLogs() {
+        const logs   = document.getElementById("logsInput").value.trim();
+        const domain = document.getElementById("domainSelect").value;
+
+        if (!logs) {
+            alert("Please paste some logs first!");
+            return;
+        }
+        // check domain function before starting
+         checkDomainMismatch(logs, domain);
+
+        document.getElementById("loading").style.display = "block";
+        document.getElementById("results").style.display = "none";
+        document.getElementById("severityBanner").style.display = "none";
+        document.getElementById("domainIndicator").style.display = "none";
+        document.getElementById("analyzeBtn").disabled = true;
+
+        countLogs(logs);
+        startTimer();
+
+        try {
+            const response = await fetch("http://localhost:5000/analyze", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ logs: logs, domain: domain })
+            });
+
+            const data = await response.json();
+            console.log("RESPONSE:", data);
+            lastData = data;
+
+            const analysis    = data.analysis          || {};
+            const issues      = analysis.issues         || [];
+            const warnings    = analysis.warnings       || [];
+            const rules       = data.ruleBasedAlerts    || [];
+            const predictions = data.failurePredictions || [];
+            const severity    = analysis.severity       || "LOW";
+            const riskScore   = analysis.overall_risk_score || 0;
+            const summary     = analysis.summary        || "No summary available";
+            const aiPrediction = analysis.failure_prediction || null;
+
+            document.getElementById("riskScore").textContent = riskScore;
+
+            const banner = document.getElementById("severityBanner");
+            banner.className = "severity-banner severity-" + severity;
+            const emoji = severity === "HIGH" ? "🔴" : severity === "MEDIUM" ? "🟡" : "🟢";
+            banner.textContent = emoji + " Severity: " + severity + " — Risk Score: " + riskScore + "/10";
+            banner.style.display = "block";
+
+            document.getElementById("summaryText").textContent = summary;
+
+            renderDomainIndicator(domain);
+            renderAIPrediction(aiPrediction);
+
+            // Issues
+            const issuesList = document.getElementById("issuesList");
+            issuesList.innerHTML = "";
+            if (issues.length > 0) {
+                issues.forEach(function(item) {
+                    issuesList.innerHTML += '<div class="issue-item">' +
+                        '<div class="item-header">' +
+                        '<span class="item-name-red">⚠️ ' + item.issue + '</span>' +
+                        '<span class="risk-badge ' + getRiskClass(item.risk_score) + '">Risk: ' + item.risk_score + '/10</span>' +
+                        '</div>' +
+                        '<p class="item-explanation">📖 ' + item.explanation + '</p>' +
+                        '<p class="item-suggestion">💡 Fix: ' + item.suggestion + '</p>' +
+                        '<div class="risk-bar"><div class="risk-bar-fill" style="width:' + (item.risk_score * 10) + '%;background:' + getRiskColor(item.risk_score) + '"></div></div>' +
+                        '</div>';
+                });
+            } else {
+                issuesList.innerHTML = '<p class="no-data">No critical issues found ✅</p>';
+            }
+
+            // Warnings
+            const warningsList = document.getElementById("warningsList");
+            warningsList.innerHTML = "";
+            if (warnings.length > 0) {
+                warnings.forEach(function(item) {
+                    warningsList.innerHTML += '<div class="warn-item">' +
+                        '<div class="item-header">' +
+                        '<span class="item-name-yellow">⚡ ' + item.warning + '</span>' +
+                        '<span class="risk-badge ' + getRiskClass(item.risk_score) + '">Risk: ' + item.risk_score + '/10</span>' +
+                        '</div>' +
+                        '<p class="item-explanation">📖 ' + item.explanation + '</p>' +
+                        '<p class="item-suggestion">💡 Fix: ' + item.suggestion + '</p>' +
+                        '<div class="risk-bar"><div class="risk-bar-fill" style="width:' + (item.risk_score * 10) + '%;background:' + getRiskColor(item.risk_score) + '"></div></div>' +
+                        '</div>';
+                });
+            } else {
+                warningsList.innerHTML = '<p class="no-data">No warnings found ✅</p>';
+            }
+
+            // Rules
+            const rulesList = document.getElementById("rulesList");
+            rulesList.innerHTML = "";
+            if (rules.length > 0) {
+                rules.forEach(function(rule) {
+                    rulesList.innerHTML += '<div class="rule-item">' +
+                        '<span class="rule-msg">' + rule.message + '</span>' +
+                        '<span class="' + (rule.type === "CRITICAL" ? "rule-critical" : "rule-warning") + '">' + rule.type + ' | ' + rule.risk_score + '</span>' +
+                        '</div>';
+                });
+            } else {
+                rulesList.innerHTML = '<p class="no-data">No rule based alerts ✅</p>';
+            }
+
+            // Pattern predictions
+            const predictionsList = document.getElementById("predictionsList");
+            predictionsList.innerHTML = "";
+            if (predictions.length > 0) {
+                predictions.forEach(function(pred) {
+                    predictionsList.innerHTML += '<div class="pred-item">' +
+                        '<div class="pred-header">' +
+                        '<span class="pred-pattern">🔮 ' + pred.pattern + '</span>' +
+                        '<span class="pred-count">Seen ' + pred.occurrences + 'x | ' + pred.risk_level + '</span>' +
+                        '</div>' +
+                        '<p class="pred-text">' + pred.prediction + '</p>' +
+                        '</div>';
+                });
+            } else {
+                predictionsList.innerHTML = '<p class="no-data">No failure patterns detected ✅</p>';
+            }
+
+            document.getElementById("results").style.display = "block";
+
+        } catch (error) {
+            console.error("ERROR:", error);
+            alert("Error: " + error.message);
+        }
+
+        stopTimer();
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("analyzeBtn").disabled = false;
+    }
+
+    function downloadReport() {
+        if (!lastData) return;
+        const a      = lastData.analysis || {};
+        const fp     = a.failure_prediction || {};
+        const domain = document.getElementById("domainSelect");
+        const domainText = domain.options[domain.selectedIndex].text;
+
+        const report =
+            "AI LOG ANALYZER REPORT\n======================\n" +
+            "Time: "       + new Date().toLocaleString() + "\n" +
+            "Domain: "     + domainText                  + "\n" +
+            "Severity: "   + (a.severity || "N/A")       + "\n" +
+            "Risk Score: " + (a.overall_risk_score || 0) + "/10\n\n" +
+
+            "SUMMARY:\n" + (a.summary || "") + "\n\n" +
+
+            "AI FAILURE PREDICTION:\n" +
+            "- Probability: " + (fp.probability || 0)     + "%\n" +
+            "- Time Window: " + (fp.time_window || "N/A") + "\n" +
+            "- Confidence: "  + (fp.confidence  || "N/A") + "\n" +
+            "- Signals:\n"    + (fp.signals || []).map(s => "  * " + s).join("\n") + "\n\n" +
+
+            "CRITICAL ISSUES:\n" +
+            (a.issues || []).map(i =>
+                "- " + i.issue + " (Risk: " + i.risk_score + "/10)\n" +
+                "  " + i.explanation + "\n" +
+                "  Fix: " + i.suggestion
+            ).join("\n") + "\n\n" +
+
+            "WARNINGS:\n" +
+            (a.warnings || []).map(w =>
+                "- " + w.warning + " (Risk: " + w.risk_score + "/10)\n" +
+                "  " + w.explanation + "\n" +
+                "  Fix: " + w.suggestion
+            ).join("\n") + "\n\n" +
+
+            "RULE ALERTS:\n" +
+            (lastData.ruleBasedAlerts || []).map(r =>
+                "- [" + r.type + "] " + r.message
+            ).join("\n") + "\n\n" +
+
+            "PATTERN PREDICTIONS:\n" +
+            (lastData.failurePredictions || []).map(p =>
+                "- " + p.pattern + " (" + p.occurrences + "x): " + p.prediction
+            ).join("\n");
+
+        const blob = new Blob([report], { type: "text/plain" });
+        const url  = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href     = url;
+        link.download = "log-report-" + Date.now() + ".txt";
+        link.click();
+    }
+</script>
+</body>
+</html>
